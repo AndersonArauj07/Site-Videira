@@ -1,46 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* --- Reset e Configurações Básicas --- */
 * {
-    width: 100% !important;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    background: #000;
-    color: #fff;
-}
-
-.navbar-nav {
-    display: flex impot !important;
-    justify-content: center !important;
-    /* centraliza no espaço disponível */
+    background: #000 !important;
+    color: #fff !important;
     width: 100% !important;
 }
-
-/* #navbar {
-    background-color: black !important;
-} */
 
 a {
     color: rgb(255, 255, 255) !important;
     font-weight: 600 !important;
+    text-decoration: none !important;
 }
 
-.dropdown-item {
-    color: rgb(216, 207, 207) !important;
-    font-weight: 600 !important;
+h1 {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.dropdown-menu {
-    background: black !important; 
-    width: 200px !important;
-    background-color: black !important;
+/* --- ESTILOS DO HEADER/NAVBAR --- */
+
+/* BARRA SUPERIOR (INSTAGRAM CENTRALIZADO COM ÍCONE) */
+.top-bar {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding-bottom: 5px !important;
 }
 
-.dropdown-menu a:hover {
-    /* background: black !important; */
-    font-weight: 600 !important;
-    /* background-color: rgb(68, 67, 67) !important; */
+.social-link {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
 }
 
 .container-fluid {
@@ -48,37 +43,106 @@ a {
     padding: 0vw 5vw !important;
 }
 
+/* Ajustes da Navbar */
+.navbar-brand {
+    width: auto !important;
+}
+
+#navbarSupportedContent {
+    justify-content: flex-end !important;
+    margin-left: 0 !important;
+}
+
 .nav-link {
     text-align: center !important;
 }
 
-#navbarSupportedContent {
-    display: flex !important;
-    justify-content: end !important;
-    margin-left: 10px !important;
+/* AJUSTE DO DROPDOWN DE LOCALIZAÇÃO (LARGURA e Z-INDEX) */
+.dropdown-menu {
+    background: black !important;
+    min-width: 250px !important;
+    z-index: 9999 !important;
 }
 
+.location-dropdown {
+    min-width: 320px !important;
+}
+
+.dropdown-item {
+    color: rgb(168, 158, 158) !important;
+    font-weight: 600 !important;
+    white-space: normal !important;
+}
+
+.dropdown-menu a:hover {
+    font-weight: 600 !important;
+}
+
+
+/* --- SEÇÃO HERO --- */
 #hero img {
-    width: 100%;
-    height: 300px;
-    /* ou o tamanho que você quiser */
-    object-fit: cover;
-    /* faz preencher tudo sem distorcer */
-    display: block;
-    margin: 0;
-    padding: 0;
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
+
+/* --- SEÇÃO QUEM SOMOS --- */
+.quem-somos-section {
+    padding: 80px 20px !important;
+}
+
+.quem-somos-container {
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+.qs-title {
+    text-align: center !important;
+    font-size: 60px !important;
+    font-weight: 900;
+    color: #fff !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 30px !important;
+}
+
+.texto-centralizado-grande {
+    text-align: center !important;
+    font-size: 1.2em !important;
+    color: #fff !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    line-height: 1.7 !important;
+}
+
+.qs-title img {
+    width: 50px !important;
+    height: auto !important;
+}
+
+
+/* --- SEÇÃO DESTAQUES/CARDS (CORRIGINDO O TEXTO INVISÍVEL) --- */
 #Destaquedasemana h1 {
     text-align: center !important;
     padding: 2vw !important;
 }
 
+.Destaque {
+    font-family: "Lora", serif !important;
+    font-style: normal !important;
+    gap: 10px !important;
+    text-align: center !important;
+}
+
 #cards {
     display: flex !important;
+    flex-wrap: wrap;
     align-items: center !important;
     justify-content: center !important;
-    width: 100vw !important;
+    width: 100% !important;
     gap: 20px !important;
 }
 
@@ -87,79 +151,123 @@ a {
     width: 25vw !important;
     display: flex !important;
     align-items: center !important;
-    background: #000 !important;
-    border: 1px #7c7c7c solid !important;
+    background: white !important;
+    border: 1px black!important;
 }
 
 .card-img-top {
     height: 50vh !important;
-    width: 25vw !important;
-}
-
-.Destaque {
-    font-family: "Lora", serif !important;
-    font-optical-sizing: auto !important;
-    font-style: normal !important;
-    gap: 10px;
-
-    /* PROPRIEDADE PARA CENTRALIZAR O TEXTO */
-    text-align: center !important;
+    width: 100% !important;
+    object-fit: cover !important;
 }
 
 .btn-primary {
-background-color: black !important; 
-border: 1px #7c7c7c Solid !important;
-
+    background-color: black !important;
+    border: 1px #7c7c7c Solid !important;
 }
 
 #texto {
-    height: 20vh !important;
+    height: auto !important;
     text-align: center !important;
     font-size: 1.2rem !important;
-    background-color: white !important;
+    background-color: transparent !important;
+    width: 100% !important;
+    padding: 10px !important;
+    flex-grow: 1 !important;
+    background-color: black !important;
+ 
+    align-items: center !important;
+}
+
+.card-text {
+    color: black!important; 
+     text-align: center !important;
+    /* Torna o texto do card legível */
+}
+
+
+/* --- SEÇÃO MINISTÉRIOS/CATEGORIES (IMAGENS LEGÍVEIS E CENTRALIZADAS) --- */
+#title-categories,
+#title {
+    text-align: center !important;
+    padding: 4vh 0 !important;
+    margin-top: 6vh !important;
+    font-size: 2.5rem;
 }
 
 #categories {
     display: flex !important;
-    align-items: center !important;
+    flex-wrap: wrap;
+    align-items: flex-start !important;
     justify-content: center !important;
-    width: 100vw !important;
-    height: 30vh !important;
-    gap: 2px !important;
-  
+    width: 100% !important;
+    height: auto !important;
+    padding: 20px 0 !important;
+    gap: 30px !important;
 }
 
 #categories div {
-    height: 18vh !important;
-    width: 10vw !important;
+    width: 150px !important;
+    height: auto !important;
     margin: 0 !important;
-    padding-top: 0 !important;
-    border-radius: 50% !important;
+    padding: 0 !important;
     text-align: center !important;
-    gap: 10px !important;
+    position: relative;
+}
+
+#categories div img {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    /* Garante que a imagem preencha o círculo sem distorção */
+    border: 3px solid #7c7c7c;
+    margin-bottom: 10px;
 }
 
 #categories p {
-    padding-top: 2vh !important;
+    padding-top: 0 !important;
     font-weight: 600 !important;
     font-size: 16px !important;
+    width: 100% !important;
 }
 
-section>h1 {
-    text-align: center !important;
-    padding-top: 20vh !important;
+
+/* --- SEÇÃO MOMENTOS/CAROUSEL (IMAGENS LEGÍVEIS E FLUIDAS) --- */
+#inspirations-section {
+    padding-bottom: 50px !important;
+}
+
+#inspirations {
+    padding-top: 20px !important;
 }
 
 #carouselExampleCaptions {
-    width: 80vw !important;
-    justify-content: center !important;
-    display: flex !important;
+    width: 80% !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+.carousel-item {
+    width: 100% !important;
+    height: 50vh !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 5px !important;
+}
+
+.carousel-inner .carousel-item img {
+    width: 100% !important;
+    height: 50vh !important;
+    object-fit: cover !important;
+    /* Garante que as fotos cubram o espaço e fiquem legíveis */
 }
 
 .carousel-item img {
-    width: 40vw !important;
-    height: 30vh !important;
-    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
 
 .carousel-caption {
@@ -190,150 +298,22 @@ section>h1 {
     margin: 0 6px !important;
 }
 
-#title {
-    padding: 6vh !important;
-    margin-top: 6vh !important;
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    hei
+    
+    ght: 100%;
 }
 
-#title-categories {
-    margin-top: 4vh !important;
-    gap: 10px !important;
+.card-img-top {
+    width: 100%;
+    height: 260px;          /* ajuste se quiser maior/menor */
+    object-fit: cover;
 }
 
-/* Fundo preto e área da seção */
-.quem-somos-section {
-    /* background: #000 !important; */
-    padding: 80px 20px !important;
+.card-title{ 
+     text-align: center !important;
 }
-
-/* Centralização do conteúdo */
-.quem-somos-container {
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-}
-
-/* Título estilo mega-font */
-.qs-title {
-    text-align: center !important;
-    font-size: 60px !important;
-    font-weight: 900;
-    color: #fff !important;
-    letter-spacing: 2px !important;
-    margin-bottom: 30px !important;
-}
-
-/* Texto estiloso */
-.qs-text {
-    text-align: center !important;
-    font-size: 22px !important;
-    color: #ccc !important;
-    max-width: 900px !important;
-    margin: 0 auto !important;
-    line-height: 1.7 !important;
-}
-
-.texto-centralizado-grande {
-    /* CENTRALIZAR O TEXTO */
-    text-align: center !important;
-
-    /* AUMENTAR O TAMANHO DA FONTE */
-    font-size: 1.2em !important;
-    /* Exemplo: 20% maior que o tamanho padrão. Você pode usar px, rem, ou outros valores. */
-    /* Exemplo Alternativo: font-size: 20px; */
-
-    /* OPÇÃO: Mudar a fonte (opcional) */
-    /* font-family: 'Arial', sans-serif; */
-    color: #fff !important;
-}
-
-.qs-title img {
-    width: 100px !important;
-    /* Largura reduzida */
-    height: auto !important;
-    /* Mantém a proporção */
-    color: black
-}
-
-.carousel-img {
-    height: 100px !important;
-    object-fit: cover !important;
-}
-
-.logo-igreja {
-    /* background-color: black !important; */
-    color: white !important;
-    padding: 5px 10px !important;
-    display: inline-block !important;
-    border-radius: 15px solid !important;
-}
-
-/* 2. Aplica as regras de ajuste nas imagens dentro do carrossel */
-.carousel-inner .carousel-item img {
-    /* Garante que a largura ocupe 100% do container */
-    width: 100% !important;
-
-    /* Faz a imagem ocupar 100% da altura definida no .carousel-inner */
-    height: 100% !important;
-
-    /* PROPRIEDADE CHAVE: Garante que a imagem cubra o espaço sem esticar, cortando as bordas se necessário */
-    object-fit: cover !important;
-}
-
-/* 3. Ajuste para que o carrossel não fique muito grande em telas enormes */
-.carousel {
-    max-width: 100% !;
-    margin: 0 auto !important;
-}
-
-/* COLOCAR NO SEU ARQUIVO CSS (.css) */
-
-/* Estilo para a barra de navegação completa (Fundo Escuro e Alinhamento) */
-.menu-principal {
-    /* Fundo escuro */
-    /* background-color: black !important; */
-    color: white !important;
-
-    /* CHAVE: Alinhamento - Coloca os elementos na mesma linha */
-    display: flex !important;
-    /* Distribui o espaço: Logo na esquerda, Itens na direita */
-    justify-content: space-between !important;
-    /* Centraliza os itens verticalmente */
-    align-items: center !important;
-
-    padding: 10px 20px !important;
-    width: 100% !important;
-}
-
-/* Estilo para o contêiner dos links do lado direito */
-.menu-itens {
-    display: flex !important;
-    align-items: center !important;
-    gap: 20px !important;
-    /* Espaço entre os links */
-}
-
-/* Faixa preta no nome da Igreja (logo-igreja) */
-.logo-igreja {
-    /* background-color: black !important; */
-    color: white !important;
-    padding: 5px 10px !important;
-    display: inline-block !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-    font-size: 1.1rem !important;
-    border-radius: 5px solid !important;
-
-}
-
-/* Estilo geral para os links de navegação */
-.nav-link {
-    color: white !important;
-    text-decoration: none !important;
-    padding: 5px 0 !important;
-}
-
-/* Garante que o link do Instagram fique com o sublinhado, se desejar */
-.nav-instagram {
-    text-decoration: underline !important;
-}
-
