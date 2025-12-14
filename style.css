@@ -314,3 +314,17 @@ h1 {
 .card-title{ 
      text-align: center !important;
 }
+
+#carouselExampleCaptions {
+  /* Define a altura máxima do carrossel, por exemplo, 400 pixels */
+  max-height: 400px !important; 
+  /* Adiciona um estouro oculto para cortar o excesso, se houver */
+  overflow: hidden !important; 
+}
+
+#carouselExampleCaptions .carousel-item img {
+  /* Garante que a imagem se ajuste à altura máxima do item */
+  height: 400px !important; 
+  /* Mantém a proporção e preenche o item, cortando as bordas se necessário */
+  object-fit: cover !important; 
+}
